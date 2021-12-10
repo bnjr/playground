@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import styled from 'styled-components'
 import Button from '../components/button'
 import Subtitle from '../components/subtitle'
-import { ThemeProvider } from '../providers/themeContext'
+import ButtonCounter from '../components/buttonCounter'
+import SubtitleCounter from '../components/subtitleCounter'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
@@ -11,6 +12,10 @@ const Home: NextPage = () => {
       <Title>useContext Hook page2</Title>
       <Button />
       <Subtitle />
+      <p>
+        <ButtonCounter />
+        <SubtitleCounter />
+      </p>
       <p>
         <Link href="/">
           <a>Goto Page 1</a>

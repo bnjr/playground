@@ -20,7 +20,6 @@ const ThemeContext = createContext(initialState)
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(themes.light)
   console.log(`ThemeProvider got called`)
-  // console.trace()
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}

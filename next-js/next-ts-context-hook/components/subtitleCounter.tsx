@@ -1,16 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import useCounter from '../providers/counterContext'
-import useTheme from '../providers/themeContext'
 
 const Subtitle = () => {
-  const { theme } = useTheme()
   const { counter } = useCounter()
+
+  // debugger
 
   return (
     <MySubtitle>
-      My current theme is {theme.background === '#eeeeee' ? 'light' : 'dark'}
-      {/* <p>My Counter is {counter.count}</p> */}
+      <p>Counter is {counter.count}</p>
     </MySubtitle>
   )
 }
