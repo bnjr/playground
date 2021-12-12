@@ -1,4 +1,5 @@
-import type { NextPage } from 'next'
+import type { ReactElement } from 'react'
+import Layout from '../components/layout'
 import styled from 'styled-components'
 import Button from '../components/button'
 import Subtitle from '../components/subtitle'
@@ -6,7 +7,7 @@ import ButtonCounter from '../components/buttonCounter'
 import SubtitleCounter from '../components/subtitleCounter'
 import Link from 'next/link'
 
-const Home: NextPage = () => {
+export default function Page() {
   return (
     <Wrapper>
       <Title>useContext Hook page2</Title>
@@ -24,6 +25,9 @@ const Home: NextPage = () => {
     </Wrapper>
   )
 }
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>
+}
 const Wrapper = styled.div`
   padding-top: 150px;
   display: grid;
@@ -40,5 +44,3 @@ const Title = styled.h1`
   color: blue;
   text-align: center;
 `
-
-export default Home

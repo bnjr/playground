@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import useCounter from '../providers/counterContext'
 
 const Button = () => {
-  const { counter, setCounter } = useCounter()
+  const { counter } = useCounter().counterStore
 
   return (
     <StyledButton
       onClick={() => {
         counter.increaseCount()
         // const newCounter = counter.
-        setCounter(counter.getCopy())
+        // setCounter(counter.getCopy())
       }}>
       I will increase the counter
     </StyledButton>

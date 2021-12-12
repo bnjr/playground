@@ -1,19 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { observer } from 'mobx-react-lite'
 import useCounter from '../providers/counterContext'
-import useTheme from '../providers/themeContext'
 
-const Subtitle = () => {
-  const { theme } = useTheme()
-  const { counter } = useCounter()
-
+const Subtitle = observer(() => {
+  const { counter } = useCounter().counterStore
+  debugger
   return (
     <MySubtitle>
-      My current theme is {theme.background === '#eeeeee' ? 'light' : 'dark'}
-      {/* <p>My Counter is {counter.count}</p> */}
+      <p>Counter is {counter.count}</p>
     </MySubtitle>
   )
-}
+})
 
 export default Subtitle
 
