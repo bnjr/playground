@@ -1,11 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import useCounter from '../providers/counterContext'
 import useTheme, { themes } from '../providers/themeContext'
 
 const Button = () => {
   const { theme, setTheme } = useTheme()
-  const { counter, setCounter } = useCounter()
 
   return (
     <StyledButton
@@ -13,7 +11,6 @@ const Button = () => {
       background={theme.background}
       onClick={() => {
         setTheme(theme === themes.light ? themes.dark : themes.light)
-        // counter.increaseCount()
       }}>
       I am styled by theme context!
     </StyledButton>
