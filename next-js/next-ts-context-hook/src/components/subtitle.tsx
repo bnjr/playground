@@ -4,7 +4,7 @@ import useTheme from '../providers/themeContext'
 
 const Subtitle = () => {
   const { theme } = useTheme()
-  debugger
+  console.log(`Subtitle got called`)
   return (
     <MySubtitle>
       My current theme is {theme.background === '#eeeeee' ? 'light' : 'dark'}

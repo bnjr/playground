@@ -25,15 +25,3 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     </ThemeProvider>
   )
 }
-
-// function MyApp({ Component, pageProps }: AppProps) {
-//   return (
-//     <ThemeProvider>
-//       <CounterProvider>
-//         <Component {...pageProps} />
-//       </CounterProvider>
-//     </ThemeProvider>
-//   )
-// }
-
-// export default MyApp

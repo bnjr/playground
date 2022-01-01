@@ -4,8 +4,8 @@ import { observer } from 'mobx-react-lite'
 import useCounter from '../providers/counterContext'
 
 const Subtitle = observer(() => {
-  const { counter } = useCounter().counterStore
-  debugger
+  const { counter } = useCounter()
+  console.log(`Counter got called`)
   return (
     <MySubtitle>
       <p>Counter is {counter.count}</p>

@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import useCounter from '../providers/counterContext'
 
 const Button = () => {
-  const { counter } = useCounter().counterStore
-
+  const { counter } = useCounter()
   return (
     <StyledButton
       onClick={() => {

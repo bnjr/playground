@@ -8,9 +8,11 @@ import SubtitleCounter from '../components/subtitleCounter'
 import Link from 'next/link'
 
 export default function Page() {
+  console.log(`Page1 got called`)
+
   return (
     <Wrapper>
-      <Title>useContext Hook page1</Title>
+      <Title>Page1</Title>
       <Button />
       <Subtitle />
       <p>
